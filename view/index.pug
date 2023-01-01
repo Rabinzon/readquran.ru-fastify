@@ -1,0 +1,16 @@
+extends ./layouts/application.pug
+
+block content
+  .row.justify-content-md-center
+    .col-md-8.col-sm-12
+      .text-center.my-5
+        h1 Перевод священного Корана
+        p.lead.mb-0 на русский язык
+        img(class="w-50 my-4" src="/public/bismillah.png")
+
+  .row
+    .col.main-list
+      ol.list
+        each surah in surahs || []
+          li
+            a.p-1.d-block.w-100(href='/surah/'+surah.id)!=surah.name

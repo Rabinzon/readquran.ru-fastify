@@ -1,0 +1,16 @@
+extends ./layouts/application.pug
+
+block content
+  h5.mt-4 Сура &laquo;
+    span=surah.name
+    | &raquo;
+  .row
+    .col: .pl-0
+      each ayat in ayats || []
+        p.my-1
+          p.lead=ayat.Author.name
+          p.p-1.text-muted
+            - var href = `/surah/${ayat.surah_id}?translator=${ayat.Author.id}#ayat-${ayat.order}`
+            a(href=href).text-decoration-none.text-dark
+              span.badge.bg-dark.me-1=ayat.surah_id + ':' + ayat.order
+              span!=ayat.text

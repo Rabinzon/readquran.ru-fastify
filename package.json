@@ -1,0 +1,36 @@
+{
+  "name": "readquran.ru_2022",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with Fastify-CLI.",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tap \"test/**/*.test.js\"",
+    "start": "fastify start -l info app.js",
+    "dev": "fastify start -w -l info -P app.js",
+    "sequelize": "node_modules/.bin/sequelize",
+    "migrate": "npm run sequelize db:migrate",
+    "seed": "npm run sequelize db:seed:all"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/autoload": "^5.0.0",
+    "@fastify/env": "^4.2.0",
+    "@fastify/sensible": "^5.0.0",
+    "@fastify/static": "^6.6.0",
+    "@fastify/view": "^7.3.0",
+    "fastify": "^4.0.0",
+    "fastify-cli": "^5.7.0",
+    "fastify-plugin": "^4.0.0",
+    "pg": "^8.8.0",
+    "pug": "^3.0.2",
+    "sequelize-fastify": "^2.0.0"
+  },
+  "devDependencies": {
+    "tap": "^16.1.0"
+  }
+}

@@ -1,0 +1,22 @@
+extends ./layouts/application.pug
+
+block content
+  .row.justify-content-md-center
+    .col-md-8.col-sm-12
+      .my-3
+        h1(style="word-break: break-all;").mb-0: small= 'Сура ' + surah.traditional_order + ' «' + surah.name + '»'
+        small: i хронолоческий порядок суры &nbsp;
+          !=surah.chronological_order
+      p.lead=author.name
+      ul.nav.nav-pills
+        li.nav-item
+          a.nav-link(href='/surah/' + surah.id + '?translator=1', class=author.id == 1 && 'active') Кулиев
+        li.nav-item
+          a.nav-link(href='/surah/' + surah.id + '?translator=2', class=author.id == 2 && 'active') Крачковский
+
+  .row
+    .col-md-8.col-sm-12.m-auto
+      each ayat in surah.Ayats || []
+        p.ayat(id='ayat-' + ayat.order)
+          span.badge.bg-dark.me-1=ayat.surah_id + ':' + ayat.order
+          span!=ayat.text

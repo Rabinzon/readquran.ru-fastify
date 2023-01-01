@@ -1,0 +1,21 @@
+.main-list {
+  margin: auto;
+  flex: 0;
+}
+.main-list ol {
+  column-count: 3;
+  column-gap: 10vw;
+}
+mark {
+  background-color: yellow;
+}
+
+.ayat {
+  padding: 8px;
+  margin-bottom: 0;
+}
+
+.selected {
+  background-color: rgb(255, 244, 229);
+  border-radius: .25rem;
+}

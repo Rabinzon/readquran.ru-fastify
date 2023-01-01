@@ -1,0 +1,21 @@
+extends ./layouts/application.pug
+
+block content
+  h5.mt-4 Количество найденных аятов по запросу&nbsp;
+    i: strong!=query + ':&nbsp;'
+    !=results.length
+  // .mb-4: small.text-muted Аяты отсортированы в хронологическом порядке.
+  ul.nav.nav-pills
+    li.nav-item
+      a.nav-link(href='/search?translator=1&query=' + query, class=translator==1 && 'active') Кулиев
+    li.nav-item
+      a.nav-link(href='/search?translator=2&query=' + query, class=translator==2 && 'active') Крачковский
+
+  .row
+    .col: .pl-0
+      each ayat in results || []
+        p.my-1
+          p.p-1.text-muted
+            a(href=ayat.surah_id + '/' + ayat.order).text-decoration-none.text-dark
+              span.badge.bg-dark.me-1=ayat.surah_id + ':' + ayat.order
+              span!=ayat.text
