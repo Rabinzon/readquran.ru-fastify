@@ -20,9 +20,29 @@ mark {
   background-color: rgb(255, 244, 229);
   border-radius: .25rem;
 }
-@media(max-width:500px) {
+
+
+
+
+@media (min-width: 576px) {
+.container, 
+.container-sm {
+    max-width: 644px;
+  }
+}
+
+
+
+@media(max-width:630px) {
   .main-list ol {
     column-count: 2;
-    column-gap: 15vw;
+    
   }
+}
+
+@media(max-width:420px) {
+  .main-list ol {
+    column-count: 1;
+    
   }
+}
