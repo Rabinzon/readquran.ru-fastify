@@ -17,11 +17,7 @@ html(lang="en")
     link(rel='stylesheet', href='/public/main.css')
 
   body.d-flex.flex-column.justify-content-between
-    .sidebar
-      ol.list
-        each surah in surahs || []
-          li
-            a.p-1.d-block.w-100(href='/surah/' + surah.id)!=surah.name
+
     .content
 
     nav.navbar.navbar-expand-lg.navbar-light.bg-light
@@ -35,7 +31,7 @@ html(lang="en")
             li.nav-item
               a.nav-link.active(aria-current='page' href='#') Аудио
             li.nav-item
-              a.nav-link(href='#') Коран в подарок
+              a.nav-link(href='http://free-quran.ru/') Коран в подарок
         form(action="/search").d-flex
           .input-group
             input.form-control(type='search' value=search name="query" placeholder='Поиск аятов' aria-label='Search')

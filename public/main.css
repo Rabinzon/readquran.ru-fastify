@@ -7,7 +7,8 @@
   column-gap: 10vw;
 }
 mark {
-  background-color: yellow;
+  background-color: #ffc107;
+  border-radius: 8px;
 }
 
 .ayat {
@@ -19,3 +20,9 @@ mark {
   background-color: rgb(255, 244, 229);
   border-radius: .25rem;
 }
+@media(max-width:500px) {
+  .main-list ol {
+    column-count: 2;
+    column-gap: 15vw;
+  }
+  }
