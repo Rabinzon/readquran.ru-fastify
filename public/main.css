@@ -1,3 +1,8 @@
+
+a {
+  text-decoration: none;
+}
+
 .main-list {
   margin: auto;
   flex: 0;
@@ -8,7 +13,7 @@
 }
 mark {
   background-color: #ffc107;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
 .ayat {
@@ -22,10 +27,14 @@ mark {
 }
 
 
+@media (min-width: 1000px) {
+  .main-list ol {
+    column-count: 4;
+    
+  }
+}
 
-
-@media (min-width: 576px) {
-.container, 
+@media (min-width: 576px) { 
 .container-sm {
     max-width: 644px;
   }
